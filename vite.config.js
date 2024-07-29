@@ -2,14 +2,11 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         react(),
         VitePWA({
-            // generates 'manifest.webmanifest' file on build
             manifest: {
-                // caches the assets/icons mentioned (assets/* includes all the assets present in your src/ directory)
                 includeAssets: [
                     "favicon.ico",
                     "apple-touch-icon.png",
@@ -51,14 +48,13 @@ export default defineConfig({
                 ],
             },
             workbox: {
-                // defining cached files formats
                 globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}"],
             },
         }),
     ],
-    base: "/lt-rules/", // Ensures the assets are served relative to the docs directory
+    base: "/lt-rules/",
     build: {
-        outDir: "docs", // Changes the output directory to docs
-        assetsDir: "", // Optionally, you can set this to an empty string if you want to place assets directly in the docs folder
+        outDir: "docs",
+        assetsDir: "",
     },
 });
