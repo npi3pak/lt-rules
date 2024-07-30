@@ -7,7 +7,7 @@ const Tabs = ({ children }) => {
 
     return (
         <>
-            <nav className="flex gap-6" aria-label="Tabs">
+            <nav className="flex gap-6 flex-wrap flex-row justify-center" aria-label="Tabs">
                 {React.Children.map(children, (child, index) => (
                     <a
                         key={`tab-${index}`}

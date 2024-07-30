@@ -4,7 +4,7 @@ import { Nonus } from "./pages/Nonus";
 
 const App = () => {
     return (
-        <div className="flex flex-col mt-8 items-center">
+        <div className="flex flex-col m-8 items-center">
             <Nonus />
         </div>
     );

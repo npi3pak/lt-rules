@@ -1,65 +1,90 @@
-import React from "react";
 import Tabs from "../../components/Tabs";
 
 // š ž č į
 
+const nounsData = {
+    vard: {
+        name: "vard.",
+        question: "",
+        questionTranslate: "",
+        singular: ["as", "is", "ys", "a", "ė", "us"],
+    },
+    kilm: {
+        name: "kilm.",
+        question: "Kur?",
+        questionTranslate: "Кого? Чего?",
+        singular: [
+            "as → o",
+            "is → io",
+            "ys → io",
+            "a → os",
+            "ė → ės",
+            "us → aus",
+        ],
+    },
+    gal: {
+        name: "gal.",
+        question: "Ką?",
+        questionTranslate: "Что?",
+        singular: ["as → ą", "is → į", "ys → į", "a → ą", "ė → ę", "us → ų"],
+    },
+    viet: {
+        name: "viet.",
+        question: "Kur?",
+        questionTranslate: "Куда? Где?",
+        singular: [
+            "as → e",
+            "is → yje",
+            "ys → yje",
+            "a → oje",
+            "ė → ėje",
+            "us → ujs",
+        ],
+    },
+};
+
+const NounTabItem = ({
+    name,
+    question,
+    questionTranslate,
+    example,
+    singular = [],
+    plural = [],
+}) => {
+    return (
+        <div className="flex flex-col items-center">
+            <p>
+                <h3>{question}</h3>
+                <span>{questionTranslate}</span>
+            </p>
+            <div className="flex flex-col mt-4">
+                {singular.map((item, id) => (
+                    <span key={`${name}-singular-${id}`}>{item}</span>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 export const Nonus = () => {
-  return (
-    <>
-      <Tabs>
-        <div title="vald.">
-          <span>as</span>
-          <span>is</span>
-          <span>ys</span>
-          <span>a</span>
-          <span>ė</span>
-          <span>us</span>
-        </div>
-        <div title="kilm.">
-          <p>
-            <h3>Ko?</h3>
-            <span> Кого? Чего?</span>
-          </p>
-          <div className="flex flex-col mt-4">
-            <span>as → o</span>
-            <span>is → io</span>
-            <span>ys → io</span>
-            <span>a → os</span>
-            <span>ė → ės</span>
-            <span>us → aus</span>
-          </div>
-        </div>
-        <div title="naud.">This is the content of Tab 3</div>
-        <div title="gal.">
-          <p>
-            <h3>Ką?</h3>
-            <span> Что?</span>
-          </p>
-          <div className="flex flex-col mt-4">
-            <span>as → ą</span>
-            <span>is → į</span>
-            <span>ys → į</span>
-            <span>a → ą</span>
-            <span>ė → ę</span>
-            <span>us → ų</span>
-          </div>
-        </div>
-        <div title="įang."></div>
-        <div title="viet.">
-          <p>
-            <h3>Kur?</h3>
-            <span> Куда? Где?</span>
-          </p>
-          <div className="flex flex-col mt-4">
-            <span>as → e</span>
-            <span>is → yje</span>
-            <span>ys → yje</span>
-            <span>a → oje</span>
-            <span>ė → ėje</span>
-            <span>us → ujs</span>
-          </div>
-        </div>
-      </Tabs>
-    </>
-  );
+    return (
+        <>
+            <Tabs>
+                <div title="vald.">
+                    <NounTabItem {...nounsData.vard} />
+                </div>
+                <div title="kilm.">
+                    <NounTabItem {...nounsData.kilm} />
+                </div>
+                <div title="naud.">N/A</div>
+                <div title="gal.">
+                    <NounTabItem {...nounsData.gal} />
+                </div>
+                <div title="įang.">N/A</div>
+                <div title="viet.">
+                    <NounTabItem {...nounsData.viet} />
+                </div>
+            </Tabs>
+        </>
+    );
 };
