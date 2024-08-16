@@ -8,20 +8,20 @@ export default defineConfig({
     VitePWA({
       manifest: {
         includeAssets: ["favicon.ico", "apple-touch-icon.png", "assets/*"],
-        name: "Simplifying Progressive Web App (PWA) Development with Vite: A Beginners Guide",
-        short_name: "PWA Guide",
+        name: "LituCheats: Cheat sheet for lithuanian language rules",
+        short_name: "LituCheats",
         scope: "/lt-rules/",
         start_url: "/lt-rules/index.html",
         background_color: "#ffffff",
         theme_color: "#ffffff",
         icons: [
           {
-            src: "/lt-rules/icons/android-chrome-192x192.png",
+            src: "/lt-rules/icons/LituCheat-192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/lt-rules/icons/android-chrome-512x512.png",
+            src: "/lt-rules/icons/LituCheat-512.png",
             sizes: "512x512",
             type: "image/png",
           },
