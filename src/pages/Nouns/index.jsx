@@ -86,9 +86,9 @@ const NounTabItem = ({
   );
 };
 
-export const Nonus = () => {
+export const Nouns = () => {
   return (
-    <>
+    <div className="flex flex-col m-8 items-center">
       <Tabs>
         <div title="vald.">
           <NounTabItem {...nounsData.vard} />
@@ -105,6 +105,6 @@ export const Nonus = () => {
           <NounTabItem {...nounsData.viet} />
         </div>
       </Tabs>
-    </>
+    </div>
   );
 };
