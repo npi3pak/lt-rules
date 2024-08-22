@@ -49,8 +49,8 @@ export default defineConfig({
     }),
   ],
   base: "/lt-rules/",
-  build: {
-    outDir: "docs",
-    assetsDir: "",
-  },
+  // build: {
+  //   outDir: "docs",
+  //   assetsDir: "",
+  // },
 });
