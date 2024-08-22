@@ -12,8 +12,8 @@ const nounsData = {
   },
   kilm: {
     name: "kilm.",
-    question: "Kur?",
-    questionTranslate: "Кого? Чего?",
+    question: "Ko?",
+    questionTranslate: "Кого? Чего,",
     singular: ["as → o", "is → io", "ys → io", "a → os", "ė → ės", "us → aus"],
     plural: ["ai → ų", "os → ų", "ės → ų", "ys → ų", "us → ų", "iai → ų"],
   },
