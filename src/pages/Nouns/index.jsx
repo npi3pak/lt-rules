@@ -1,6 +1,6 @@
 import Tabs from "../../components/Tabs";
 
-// š ž č į ų
+// š ž č į ų ū
 
 const nounsData = {
   vard: {
@@ -12,7 +12,7 @@ const nounsData = {
   },
   kilm: {
     name: "kilm.",
-    question: "Kur?",
+    question: "Ko?",
     questionTranslate: "Кого? Чего?",
     singular: ["as → o", "is → io", "ys → io", "a → os", "ė → ės", "us → aus"],
     plural: ["ai → ų", "os → ų", "ės → ų", "ys → ų", "us → ų", "iai → ų"],
@@ -50,6 +50,30 @@ const nounsData = {
       "ys → yse",
       "us → uose",
       "iai → iuose",
+    ],
+  },
+  inag: {
+    name: "įnag.",
+    question: "(su) + kou?",
+    questionTranslate: "(с) кем? чем?",
+    singular: [
+      "as → u",
+      "is → iu",
+      "ys → iu",
+      "a → a",
+      "ė → e",
+      "is (f) → imi",
+      "us → umi",
+      "uo → enui, eria",
+    ],
+    plural: [
+      "ai → ais",
+      "iai → iais",
+      "os → omis",
+      "ės → ėmis",
+      "ys → imis",
+      "ūs → umis",
+      "erys → erimis",
     ],
   },
 };
@@ -100,7 +124,9 @@ export const Nouns = () => {
         <div title="gal.">
           <NounTabItem {...nounsData.gal} />
         </div>
-        <div title="įang.">N/A</div>
+        <div title="įang.">
+          <NounTabItem {...nounsData.inag} />
+        </div>
         <div title="viet.">
           <NounTabItem {...nounsData.viet} />
         </div>
